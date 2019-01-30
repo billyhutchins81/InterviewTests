@@ -86,38 +86,39 @@ namespace GraduationTracker.Tests.Unit
         [TestMethod]
         public void TestHasRemedial()
         {
-            var hasRemedial = (from student in _students
+            var remedialStudents = (from student in _students
                 where _tracker.HasGraduated(_diploma, student).Item2.Equals(STANDING.Remedial)
                 select _tracker.HasGraduated(_diploma, student)).ToList();
-            Assert.AreEqual(1, hasRemedial.Count, "The number of students with Remedial standing are not equal to 1");
+            Assert.AreEqual(1, remedialStudents.Count,
+                "The number of students with Remedial standing are not equal to 1");
         }
 
         [TestMethod]
         public void TestHasAverage()
         {
-            var hasAverage = (from student in _students
+            var averageStudents = (from student in _students
                 where _tracker.HasGraduated(_diploma, student).Item2.Equals(STANDING.Average)
                 select _tracker.HasGraduated(_diploma, student)).ToList();
-            Assert.AreEqual(1, hasAverage.Count, "The number of students with Average standing is not equal to 1");
+            Assert.AreEqual(1, averageStudents.Count, "The number of students with Average standing is not equal to 1");
         }
 
         [TestMethod]
         public void TestHasSumaCumLaude()
         {
-            var hasSumaCumLaude = (from student in _students
+            var sumaCumLaudeStudents = (from student in _students
                 where _tracker.HasGraduated(_diploma, student).Item2.Equals(STANDING.SumaCumLaude)
                 select _tracker.HasGraduated(_diploma, student)).ToList();
-            Assert.AreEqual(1, hasSumaCumLaude.Count,
+            Assert.AreEqual(1, sumaCumLaudeStudents.Count,
                 "The number of students with SumaCumLaude standing is not equal to 1");
         }
 
         [TestMethod]
         public void TestHasMagnaCumLaude()
         {
-            var hasMagnaCumLaude = (from student in _students
+            var magnaCumLaudeStudents = (from student in _students
                 where _tracker.HasGraduated(_diploma, student).Item2.Equals(STANDING.MagnaCumLaude)
                 select _tracker.HasGraduated(_diploma, student)).ToList();
-            Assert.AreEqual(1, hasMagnaCumLaude.Count,
+            Assert.AreEqual(1, magnaCumLaudeStudents.Count,
                 "The number of students with MagnaCumLaude standing is not equal to 1");
         }
     }
