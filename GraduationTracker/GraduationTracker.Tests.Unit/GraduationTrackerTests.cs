@@ -20,8 +20,8 @@ namespace GraduationTracker.Tests.Unit
                 Credits = 4,
                 Requirements = new[] {100, 102, 103, 104}
             };
-            const int firstStudentGrades = 95;
-            const int secondStudentGrades = 80;
+            const int magnaCumLaudeStudentGrades = 96;
+            const int sumaCumLaudeStudentGrades = 80;
             const int averageStudentGrades = 50;
             const int remedialStudentGrades = 40;
             _students = new[]
@@ -31,10 +31,10 @@ namespace GraduationTracker.Tests.Unit
                     Id = 1,
                     Courses = new[]
                     {
-                        new Course {Id = 1, Name = "Math", Mark = firstStudentGrades},
-                        new Course {Id = 2, Name = "Science", Mark = firstStudentGrades},
-                        new Course {Id = 3, Name = "Literature", Mark = firstStudentGrades},
-                        new Course {Id = 4, Name = "Physical Education", Mark = firstStudentGrades}
+                        new Course {Id = 1, Name = "Math", Mark = magnaCumLaudeStudentGrades},
+                        new Course {Id = 2, Name = "Science", Mark = magnaCumLaudeStudentGrades},
+                        new Course {Id = 3, Name = "Literature", Mark = magnaCumLaudeStudentGrades},
+                        new Course {Id = 4, Name = "Physical Education", Mark = magnaCumLaudeStudentGrades}
                     }
                 },
                 new Student
@@ -42,10 +42,10 @@ namespace GraduationTracker.Tests.Unit
                     Id = 2,
                     Courses = new[]
                     {
-                        new Course {Id = 1, Name = "Math", Mark = secondStudentGrades},
-                        new Course {Id = 2, Name = "Science", Mark = secondStudentGrades},
-                        new Course {Id = 3, Name = "Literature", Mark = secondStudentGrades},
-                        new Course {Id = 4, Name = "Physical Education", Mark = secondStudentGrades}
+                        new Course {Id = 1, Name = "Math", Mark = sumaCumLaudeStudentGrades},
+                        new Course {Id = 2, Name = "Science", Mark = sumaCumLaudeStudentGrades},
+                        new Course {Id = 3, Name = "Literature", Mark = sumaCumLaudeStudentGrades},
+                        new Course {Id = 4, Name = "Physical Education", Mark = sumaCumLaudeStudentGrades}
                     }
                 },
                 new Student
